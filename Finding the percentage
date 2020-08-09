@@ -1,0 +1,19 @@
+====================================================================================================================
+
+The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. 
+
+Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+
+=====================================================================================================================
+
+Code :
+
+n=int(input())
+student=dict()
+for i in range(0,n):
+    s=input().split()
+    student[s[0]]=s[1:len(s)]
+name=input()
+marks=list(map(float,student[name]))
+avg=(sum(marks)/len(marks))
+print("{0:.2f}".format(avg))
